@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
-    }
+    }   
 
     // Update is called once per frame
     void Update()
