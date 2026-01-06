@@ -4,6 +4,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     private float speed = 30;
     private PlayerController playercontrollerScript;
+    private float leftBound = -15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,5 +18,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
+
+        if(transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
+       
     }
 }
+
+
+
+    
+ 
